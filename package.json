@@ -1,0 +1,32 @@
+{
+  "name": "nightwatchjs-boilerplate",
+  "version": "0.0.1",
+  "description": "A starter boilerplate for building an end-to-end test with Nightwatch.js",
+  "scripts": {
+    "test": "node_modules/nightwatch/bin/nightwatch",
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": ">=7.1.0",
+    "npm": ">=4.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phisixersai/nightwatchjs-boilerplate"
+  },
+  "keywords": [
+    "node",
+    "nightwatchjs"
+  ],
+  "author": "Yu-Heng Wang(phisixersai@gmail.com)",
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "chromedriver": "^2.25.1",
+    "geckodriver": "^1.2.0",
+    "nightwatch": "^0.9.9",
+    "nightwatch-html-reporter": "^1.0.8",
+    "phantomjs-prebuilt": "^2.1.13",
+    "selenium-server-standalone-jar": "3.0.1"
+  },
+  "license": "MIT"
+}

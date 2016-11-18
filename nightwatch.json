@@ -1,0 +1,456 @@
+{
+    "src_folders": ["src/tests"],
+    "output_folder": "reports",
+    "custom_commands_path": "./commands",
+    "custom_assertions_path": "",
+    "page_objects_path": "src/pages",
+    "globals_path": "src/globals",
+    "selenium": {
+        "start_process": true,
+        "server_path": "node_modules/selenium-server-standalone-jar/jar/selenium-server-standalone-3.0.1.jar",
+        "host": "127.0.0.1",
+        "port": 4444,
+        "cli_args": {
+            "phantomjs.binary.path": "node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs",
+            "webdriver.chrome.driver": "node_modules/chromedriver/lib/chromedriver/chromedriver",
+            "webdriver.gecko.driver": "node_modules/geckodriver/bin/geckodriver"
+        }
+    },
+    "test_workers" : {
+        "enabled" : false,
+        "workers" : "auto"
+    },
+    "parallel_process_delay" : 100,
+    "test_settings": {
+        "default": {
+            "launch_url": "http://localhost",
+            "selenium_port": 4444,
+            "selenium_host": "localhost",
+            "silent": true,
+            "output": true,
+            "skip_testcases_on_fail": false,
+            "screenshots": {
+                "enabled": true,
+                "on_failure": true,
+                "on_error": true,
+                "path": "./reports/screenshots"
+            },
+            "desiredCapabilities": {
+                "browserName": "firefox",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true
+            }
+        },
+        "ie-10": {
+            "screenshots": {
+                "path": "./reports/ie-10/screenshots"
+            },
+            "desiredCapabilities": {
+                "browserName": "internet explorer",
+                "version": "10",
+                "elementScrollBehavior": 1,
+                "javascriptEnabled": true,
+                "acceptSslCerts": true,
+                "Enhanced Protected Mode" : false,
+                "enablePersistentHover" : true
+            }
+        },
+        "ie-11": {
+            "screenshots": {
+                "path": "./reports/ie-11/screenshots"
+            },
+            "desiredCapabilities": {
+                "browserName": "internet explorer",
+                "version": "11",
+                "elementScrollBehavior": 1,
+                "javascriptEnabled": true,
+
+                "acceptSslCerts": true,
+                "Enhanced Protected Mode" : false,
+                "enablePersistentHover" : true
+            }
+        },
+        "firefox": {
+            "screenshots": {
+                "path": "./reports/firefox/screenshots"
+            },
+            "desiredCapabilities": {
+                "browserName": "firefox",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true
+            }
+        },
+        "chrome": {
+            "screenshots": {
+                "path": "./reports/chrome/screenshots"
+            },
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true,
+                "chromeOptions": {
+                    "args": [
+                        "disable-web-security"
+                    ]
+                }
+            }
+        },
+        "ipad": {
+            "screenshots": {
+                "path": "./reports/ipad/screenshots"
+            },
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true,
+
+                "chromeOptions": {
+                    "mobileEmulation": { "deviceName" : "Apple iPad"},
+                    "args": [
+                        "disable-web-security"
+                    ]
+                }
+            }
+        },
+        "ipad-mini": {
+            "screenshots": {
+                "path": "./reports/ipad-mini/screenshots"
+            },
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true,
+
+                "chromeOptions": {
+                    "mobileEmulation": { "deviceName" : "Apple iPad Mini"},
+                    "args": [
+                        "disable-web-security"
+                    ]
+                }
+            }
+        },
+        "iphone-6": {
+            "screenshots": {
+                "path": "./reports/iphone-6/screenshots"
+            },
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true,
+
+                "chromeOptions": {
+                    "mobileEmulation": { "deviceName" : "Apple iPhone 6"},
+                    "args": [
+                        "disable-web-security"
+                    ]
+                }
+            }
+        },
+        "iphone-6-plus": {
+            "screenshots": {
+                "path": "./reports/iphone-6-plus/screenshots"
+            },
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true,
+
+                "chromeOptions": {
+                    "mobileEmulation": { "deviceName" : "Apple iPhone 6 Plus"},
+                    "args": [
+                        "disable-web-security"
+                    ]
+                }
+            }
+        },
+        "iphone-5": {
+            "screenshots": {
+                "path": "./reports/iphone-5/screenshots"
+            },
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true,
+
+                "chromeOptions": {
+                    "mobileEmulation": { "deviceName" : "Apple iPhone 5"},
+                    "args": [
+                        "disable-web-security"
+                    ]
+                }
+            }
+        },
+        "iphone-4": {
+            "screenshots": {
+                "path": "./reports/iphone-4/screenshots"
+            },
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true,
+
+                "chromeOptions": {
+                    "mobileEmulation": { "deviceName" : "Apple iPhone 4"},
+                    "args": [
+                        "disable-web-security"
+                    ]
+                }
+            }
+        },
+        "blackberry-playbook": {
+            "screenshots": {
+                "path": "./reports/blackberry-playbook/screenshots"
+            },
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true,
+
+                "chromeOptions": {
+                    "mobileEmulation": { "deviceName" : "BlackBerry PlayBook"},
+                    "args": [
+                        "disable-web-security"
+                    ]
+                }
+            }
+        },
+        "blackberry-z30": {
+            "screenshots": {
+                "path": "./reports/blackberry-z30/screenshots"
+            },
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true,
+
+                "chromeOptions": {
+                    "mobileEmulation": { "deviceName" : "BlackBerry Z30"},
+                    "args": [
+                        "disable-web-security"
+                    ]
+                }
+            }
+        },
+        "google-nexus-10": {
+            "screenshots": {
+                "path": "./reports/google-nexus-10/screenshots"
+            },
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true,
+
+                "chromeOptions": {
+                    "mobileEmulation": { "deviceName" : "Google Nexus 10"},
+                    "args": [
+                        "disable-web-security"
+                    ]
+                }
+            }
+        },
+        "google-nexus-4": {
+            "screenshots": {
+                "path": "./reports/google-nexus-4/screenshots"
+            },
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true,
+
+                "chromeOptions": {
+                    "mobileEmulation": { "deviceName" : "Google Nexus 4"},
+                    "args": [
+                        "disable-web-security"
+                    ]
+                }
+            }
+        },
+        "google-nexus-5": {
+            "screenshots": {
+                "path": "./reports/google-nexus-5/screenshots"
+            },
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true,
+
+                "chromeOptions": {
+                    "mobileEmulation": { "deviceName" : "Google Nexus 5"},
+                    "args": [
+                        "disable-web-security"
+                    ]
+                }
+            }
+        },
+        "google-nexus-6": {
+            "screenshots": {
+                "path": "./reports/google-nexus-6/screenshots"
+            },
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true,
+
+                "chromeOptions": {
+                    "mobileEmulation": { "deviceName" : "Google Nexus 6"},
+                    "args": [
+                        "disable-web-security"
+                    ]
+                }
+            }
+        },
+        "google-nexus-7": {
+            "screenshots": {
+                "path": "./reports/google-nexus-7/screenshots"
+            },
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true,
+
+                "chromeOptions": {
+                    "mobileEmulation": { "deviceName" : "Google Nexus 7"},
+                    "args": [
+                        "disable-web-security"
+                    ]
+                }
+            }
+        },
+        "lg-optimus-L70": {
+            "screenshots": {
+                "path": "./reports/lg-optimus-L70/screenshots"
+            },
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true,
+
+                "chromeOptions": {
+                    "mobileEmulation": { "deviceName" : "LG Optimus L70"},
+                    "args": [
+                        "disable-web-security"
+                    ]
+                }
+            }
+        },
+        "nokia-lumia-520": {
+            "screenshots": {
+                "path": "./reports/nokia-lumia-520/screenshots"
+            },
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true,
+
+                "chromeOptions": {
+                    "mobileEmulation": { "deviceName" : "Nokia Lumia 520"},
+                    "args": [
+                        "disable-web-security"
+                    ]
+                }
+            }
+        },
+        "nokia-n9": {
+            "screenshots": {
+                "path": "./reports/nokia-n9/screenshots"
+            },
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true,
+
+                "chromeOptions": {
+                    "mobileEmulation": { "deviceName" : "Nokia N9"},
+                    "args": [
+                        "disable-web-security"
+                    ]
+                }
+            }
+        },
+        "samsung-galaxy-note": {
+            "screenshots": {
+                "path": "./reports/samsung-galaxy-note/screenshots"
+            },
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true,
+
+                "chromeOptions": {
+                    "mobileEmulation": { "deviceName" : "Samsung Galaxy Note"},
+                    "args": [
+                        "disable-web-security"
+                    ]
+                }
+            }
+        },
+        "samsung-galaxy-note-2": {
+            "screenshots": {
+                "path": "./reports/samsung-galaxy-note-2/screenshots"
+            },
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true,
+
+                "chromeOptions": {
+                    "mobileEmulation": { "deviceName" : "Samsung Galaxy Note II"},
+                    "args": [
+                        "disable-web-security"
+                    ]
+                }
+            }
+        },
+        "samsung-galaxy-note-3": {
+            "screenshots": {
+                "path": "./reports/samsung-galaxy-note-3/screenshots"
+            },
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true,
+
+                "chromeOptions": {
+                    "mobileEmulation": { "deviceName" : "Samsung Galaxy Note 3"},
+                    "args": [
+                        "disable-web-security"
+                    ]
+                }
+            }
+        },
+        "samsung-galaxy-s3": {
+            "screenshots": {
+                "path": "./reports/samsung-galaxy-s3/screenshots"
+            },
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true,
+
+                "chromeOptions": {
+                    "mobileEmulation": { "deviceName" : "Samsung Galaxy S III"},
+                    "args": [
+                        "disable-web-security"
+                    ]
+                }
+            }
+        },
+        "samsung-galaxy-s4": {
+            "screenshots": {
+                "path": "./reports/samsung-galaxy-s4/screenshots"
+            },
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true,
+
+                "chromeOptions": {
+                    "mobileEmulation": { "deviceName" : "Samsung Galaxy S 4"},
+                    "args": [
+                        "disable-web-security"
+                    ]
+                }
+            }
+        }
+    }
+}
