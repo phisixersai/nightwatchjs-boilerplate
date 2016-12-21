@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A starter boilerplate for building an end-to-end test with Nightwatch.js",
   "scripts": {
-    "test": "node_modules/nightwatch/bin/nightwatch",
+    "test": "node_modules/nightwatch/bin/nightwatch"
   },
   "engineStrict": true,
   "engines": {
